@@ -1,0 +1,36 @@
+<template name="home">
+    {{#contentFor "headerButtonLeft"}}
+        <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+            {{#if isAndroid}}
+                {{> ionIcon icon='android-more-vertical'}}
+            {{else}}
+                {{> ionIcon icon='navicon'}}
+            {{/if}}
+        </button>
+    {{/contentFor}}
+
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Welcome</h1>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionContent}}
+            {{#if currentUser.profile.securityInfo}}
+                {{> normalHome}}
+             {{else}}
+                <div class="padding">
+                    <div class="text-center">
+                        <button id="completeRegistration" class="button icon-left ion-ios-information button-positive">
+                            Complete Registration
+                        </button>
+                    </div>
+
+                </div>
+
+             {{/if}}
+            {{/ionContent}}
+    {{/ionView}}
+</template>
+<template name="normalHome">
+    here will be normal home
+</template>

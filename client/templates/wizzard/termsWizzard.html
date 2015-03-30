@@ -1,0 +1,39 @@
+<template name="termsWizzard">
+    {{#contentFor "headerButtonLeft"}}
+        {{>ionNavBackButton}}
+    {{/contentFor}}
+
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Terms & condition</h1>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionContent}}
+            <div class="padding">
+                <h3 class="text-center"> Welcome {{currentUser.profile.basicInfo.Name.fname}}</h3>
+                <div class="card">
+                    <div class="item item-text-wrap text-center">
+                      <p>
+                          <h3>Here will be the text for the terms and condition</h3>
+                        <ul class="list">
+
+                            <li class="item item-checkbox">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="chkTerms">
+                                </label>
+                                I accept the terms and conditions
+                            </li>
+
+                        </ul>
+                      </p>
+                      <p>
+                          <button class="button icon-right ion-chevron-right button-positive" id="continue"> Continue</button>
+                      </p>
+                    </div>
+
+                </div>
+
+            </div>
+        {{/ionContent}}
+    {{/ionView}}
+</template>

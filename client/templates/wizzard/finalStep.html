@@ -1,0 +1,41 @@
+<template name="final">
+    {{#contentFor "headerButtonLeft"}}
+        {{>ionNavBackButton}}
+    {{/contentFor}}
+
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Security Number</h1>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionContent}}
+            <div class="card">
+                <div class="item item-text-wrap text-center">
+                    <p>
+
+                    <h3>Here will be final step</h3>
+
+
+                        <div class="padding">
+                            {{#if isLocationObtained}}
+                            <button class="button button-block button-full button-positive" id="useLocation"> Use Your Location</button>
+                            {{else}}
+                                <h2 class="text-center text-green"> Getting Your Current Location Please Wait......</h2>
+                            {{/if}}
+                            </div>
+                    </p>
+                    <p>
+
+                    <div class="padding">
+                    <button class="button button-block button-full button-positive" disabled="{{isLocationReady}}" id="complete"> Complete</button>
+                    <button class="button button-block button-full button-dark" id="cancel"> Cancel</button>
+
+                </div>
+                    </p>
+                </div>
+
+            </div>
+
+        {{/ionContent}}
+    {{/ionView}}
+</template>

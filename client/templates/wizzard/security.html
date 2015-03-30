@@ -1,0 +1,46 @@
+<template name="securityWizard">
+    {{#contentFor "headerButtonLeft"}}
+        {{>ionNavBackButton}}
+    {{/contentFor}}
+
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Security Number</h1>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionContent}}
+            <div class="card">
+                <div class="item item-text-wrap text-center">
+                    <p>
+
+                    <h3>Here will be the text for the terms and condition</h3>
+                    <ul class="list">
+
+                        <li class="item item-checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox" id="chkTerms">
+                            </label>
+                            I accept the terms and conditions
+                        </li>
+
+                    </ul>
+                    </p>
+                    <p>
+
+                    <div class="row">
+                        <div class="col-50">
+                            <a class="button icon-left ion-chevron-left  button-dark" id="back">Back</a>
+                        </div>
+                        <div class="col-50">
+                            <button class="button icon-right ion-chevron-right button-positive" id="continue"> Continue</button>
+                        </div>
+                    </div>
+
+                    </p>
+                </div>
+
+            </div>
+
+        {{/ionContent}}
+    {{/ionView}}
+</template>
