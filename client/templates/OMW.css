@@ -34,3 +34,18 @@
     bottom: 0;
     width: 100%;
 }
+.badge1{
+    color:#fff;
+    padding: 3px;
+    height: 10px;
+    width: 10px;
+}
+.text-red{
+    color: red;
+}
+.badge-success1{
+    background: green;
+}
+.badge-danger1{
+    background: red;
+}

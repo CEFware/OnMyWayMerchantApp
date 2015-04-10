@@ -17,14 +17,21 @@ Template.final.events({
        };
        Meteor.call('completeStep',user,function(err){
           if(!err){
-              Router.go('/');
+              Meteor.call('insertStatus',function(err){
+                  if(!err){
+                      Router.go('/');
+                  }
+              });
+
           }
        });
    },
     'click #useLocation':function(e,t){
         e.preventDefault();
         Meteor.call('updateLocation',Session.get('currLocation'),function(err){
+            if(!err){
 
+            }
         });
     }
 });
