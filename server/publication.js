@@ -15,6 +15,7 @@ Meteor.publish('driveInfo',function(isMerchant,id){
     if(isMerchant){
         return db.driveInfo.find({merchantId:this.userId});
     }else{
-        return db.driveInfo.find({customerId:id})
+        var driveInfo= db.driveInfo.find({customerId:id});
+        return driveInfo;
     }
 });

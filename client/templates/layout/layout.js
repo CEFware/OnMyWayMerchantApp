@@ -7,6 +7,9 @@ Template.layout.onCreated(function(){
 Template.layout.helpers({
     noOfdrives:function(status){
         return db.driveInfo.find({merchantId:Meteor.userId(),status:status}).count();
+    },
+    newdriveRequest:function(){
+        return db.driveInfo.find({merchantId:Meteor.userId(),merchantSeen:false}).count();
     }
 });
 Template.layout.events({
