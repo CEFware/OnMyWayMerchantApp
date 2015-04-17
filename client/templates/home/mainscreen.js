@@ -7,6 +7,9 @@ Template.AccountPage.events({
        Meteor.loginWithPassword(t.find('#login_email').value, t.find('#login_password').value,function(err,res){
            if(err)
                 alert(err.reason);
+           else{
+
+           }
        });
    }
 });
