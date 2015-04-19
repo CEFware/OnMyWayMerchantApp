@@ -19,3 +19,7 @@ Meteor.publish('driveInfo',function(isMerchant,id){
         return driveInfo;
     }
 });
+Meteor.publish('messeges',function(driveId){
+   var msg= db.messeges.find({driveId:driveId});
+    return msg;
+});

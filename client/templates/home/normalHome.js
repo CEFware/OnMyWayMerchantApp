@@ -13,8 +13,10 @@ Template.normalHome.events({
    'click .btn-status':function(e,t){
        e.preventDefault();
         var status=$(e.target).attr('data-status');
+       var id=this._id;
        Meteor.call('driveAccessed',this._id,status,function(err,res){
-
+            if(!err && status=='accepted')
+                Router.go('/meet/'+id);
        });
    }
 });

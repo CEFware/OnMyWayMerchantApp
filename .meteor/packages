@@ -15,3 +15,4 @@ accounts-base
 accounts-password
 mdg:geolocation
 mizzao:user-status
+dburles:google-maps

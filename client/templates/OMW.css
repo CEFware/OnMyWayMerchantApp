@@ -49,3 +49,132 @@
 .badge-danger1{
     background: red;
 }
+.conversation {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: Roboto, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+.conversation .massages {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+.conversation .massages .massage {
+    margin-bottom: 10px;
+    position: relative;
+}
+.conversation .massages .massage .massage-text {
+    padding: 10px;
+    position: relative;
+}
+.conversation .massages .massage .massage-text p {
+    margin: 0;
+    font-size: 16px;
+    color: #111111;
+    font-weight: 300;
+}
+.conversation .massages .massage .massage-text:after {
+    top: 18px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-width: 5px;
+    margin-top: -5px;
+}
+.conversation .massages .massage.massage-left .massage-author {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.conversation .massages .massage.massage-left .massage-text {
+    margin-left: 50px;
+    background-color: #c7edfc;
+}
+.conversation .massages .massage.massage-left .massage-text:after {
+    right: 100%;
+    border-color: rgba(136, 183, 213, 0);
+    border-right-color: #c7edfc;
+}
+.conversation .massages .massage.massage-right .massage-author {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.conversation .massages .massage.massage-right .massage-text {
+    background-color: #e5f7fd;
+    margin-right: 50px;
+}
+.conversation .massages .massage.massage-right .massage-text:after {
+    left: 100%;
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: #e5f7fd;
+}
+.conversation .massage-date-divider {
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.conversation .massage-date-divider:after {
+    height: 1px;
+    width: 100%;
+    content: "";
+    background-color: #e4ecef;
+    display: block;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+}
+.conversation .massage-date-divider .date {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 0 10px;
+    color: #a2c5d3;
+    font-weight: 300;
+    font-size: 14px;
+}
+.conversation .massage-post {
+    margin-top: 20px;
+}
+.conversation .massage-post textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+#map-container{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+
+}
+.avatar_40{
+    width: 40px;
+    height: 40px;
+}
+.messege-status{
+    float: right;
+    padding-right: 5px;
+}
+.badge2 {
+    position:relative;
+}
+.badge2[data-badge]:after {
+    content:attr(data-badge);
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    font-size: 15px;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    background:red;
+    color:white;
+    width:18px;height:18px;
+    text-align:center;
+    line-height:18px;
+    border-radius:50%;
+    box-shadow:0 0 1px #333;
+}

@@ -1,0 +1,45 @@
+<template name="meet">
+        {{#contentFor "headerButtonLeft"}}
+            {{>ionNavBackButton text="Main Screen" href="/"}}
+        {{/contentFor}}
+
+        {{#contentFor "headerTitle"}}
+            <h1 class="title">Lets meet</h1>
+            {{#if dataCount}}
+                <button class="button button-clear pull-left badge2" data-badge="{{dataCount}}" data-ion-menu-toggle="right">
+                    {{#if isAndroid}}
+                        {{> ionIcon icon='chatbox-working' }}
+                    {{else}}
+                        {{> ionIcon icon='chatbubble-working'}}
+                    {{/if}}
+
+                </button>
+            {{else}}
+                <button class="button button-clear pull-left badge2" data-ion-menu-toggle="right">
+                    {{#if isAndroid}}
+                        {{> ionIcon icon='chatbox' }}
+                    {{else}}
+                        {{> ionIcon icon='chatbubble'}}
+                    {{/if}}
+
+                </button>
+
+            {{/if}}
+        {{/contentFor}}
+
+        {{#ionView}}
+            {{#ionContent}}
+                {{#if locationObtained}}
+                    {{> meetMap}}
+                {{else}}
+                    <h3 class="text-center">Geting Your Location</h3>
+                {{/if}}
+            {{/ionContent}}
+        {{/ionView}}
+</template>
+<template name="meetMap">
+    <div id="map-container">
+        {{> googleMap name="meetMap" options=exampleMapOptions}}
+
+    </div>
+</template>
